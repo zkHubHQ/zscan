@@ -24,10 +24,7 @@ export default function DailyNewAccountsCreatedChart({
 
   return (
     <CardOutline>
-      <ChartTitle
-        label="New Accounts Created"
-        tooltip="Daily instances of distinct addresses getting coin balance for the first time."
-      />
+      <ChartTitle label="Error Rate" tooltip="Daily error rate percentage." />
       <BarChart labels={labels} dataset={dataset} />
     </CardOutline>
   );

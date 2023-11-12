@@ -1,12 +1,11 @@
 import React, {createContext} from "react";
 import Grid from "@mui/material/Grid";
-import TotalSupply from "./TotalSupply";
-import TotalStake from "./TotalStake";
-import TPS from "./TPS";
-import ActiveValidators from "./ActiveValidators";
-import TotalTransactions from "./TotalTransactions";
 import {useGetInMainnet} from "../../../api/hooks/useGetInMainnet";
 import {Link} from "../../../routing";
+import CircuitConstraints from "./CircuitMetadata/CircuitContraints";
+import CircuitCurve from "./CircuitMetadata/CircuitCurve";
+import CircuitProtocol from "./CircuitMetadata/CircuitProtocol";
+import CircuitPublicInputs from "./CircuitMetadata/CircuitPublicInputs";
 
 type CardStyle = "default" | "outline";
 
@@ -47,22 +46,22 @@ export default function ZkP2PAnalyticsInfo({isOnHomePage}: NetworkInfoProps) {
       >
         <Grid item xs={12} md={6} lg={3}>
           <LinkableContainer linkToAnalyticsPage={onHomePage}>
-            <TotalSupply />
+            <CircuitCurve />
           </LinkableContainer>
         </Grid>
         <Grid item xs={12} md={6} lg={3}>
           <LinkableContainer linkToAnalyticsPage={onHomePage}>
-            <TotalStake />
+            <CircuitProtocol />
           </LinkableContainer>
         </Grid>
         <Grid item xs={12} md={6} lg={3}>
           {/* <LinkableContainer linkToAnalyticsPage={onHomePage}> */}
-            <TPS />
+          <CircuitConstraints />
           {/* </LinkableContainer> */}
         </Grid>
         <Grid item xs={12} md={6} lg={3}>
           {/* <LinkableContainer linkToAnalyticsPage={onHomePage}> */}
-            <ActiveValidators />
+          <CircuitPublicInputs />
           {/* </LinkableContainer> */}
         </Grid>
       </Grid>

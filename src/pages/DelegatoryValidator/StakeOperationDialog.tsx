@@ -333,7 +333,7 @@ function StakeOperationDialogContent({
         <StyledTooltip
           title={`Minimum stake amount is ${min} APT and maximum stake amount is ${
             Number(balance) / OCTA
-          } APT`}
+          } ETH`}
           disableHoverListener={isAmountValid}
           placement="top"
         >

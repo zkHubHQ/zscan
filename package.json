@@ -68,6 +68,7 @@
     "ts-results": "^3.3.0",
     "typescript": "^5.0.2"
   },
+  "homepage": "http://scan.zkhub.dev",
   "scripts": {
     "start": "vite --port 3000",
     "build": "tsc --noEmit && vite build",
@@ -75,7 +76,9 @@
     "lint": "tsc --noEmit && eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "fmt": "prettier --write '**/*.(js|jsx|ts|tsx|json|css|scss|md)'",
     "test": "vitest",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
@@ -110,6 +113,7 @@
     "prettier": "^3.0.0",
     "vite": "^4.3.9",
     "vite-plugin-svgr": "^3.2.0",
-    "vitest": "^0.34.0"
+    "vitest": "^0.34.0",
+    "gh-pages": "^3.1.0"
   }
 }

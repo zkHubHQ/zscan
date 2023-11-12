@@ -212,7 +212,7 @@ type TransactionColumn = keyof typeof TransactionCells;
 
 const DEFAULT_COLUMNS: TransactionColumn[] = [
   "versionStatus",
-  "type",
+  // "type",
   "timestamp",
   "sender",
   "receiverOrCounterParty",

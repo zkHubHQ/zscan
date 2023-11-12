@@ -1,18 +1,13 @@
 import {useWallet} from "@aptos-labs/wallet-adapter-react";
-import {Box, Typography} from "@mui/material";
+import {Box} from "@mui/material";
 import {useEffect} from "react";
 import {useConfig} from "statsig-react";
 import {STAKING_BANNER_CONFIG_NAME} from "../../dataConstants";
-import {useGlobalState} from "../../global-config/GlobalConfig";
-import PageHeader from "../layout/PageHeader";
-import {StakingBanner} from "./StakingBanner";
-import ValidatorsPageTabs from "./Tabs";
-import ValidatorsMap from "./ValidatorsMap";
 import {getStableID} from "../../utils";
 import {useLogEventWithBasic} from "../Account/hooks/useLogEventWithBasic";
+import ModulesTabs from "../Account/Tabs/ModulesTab/Tabs";
 
 export default function ValidatorsPage() {
-  const [state] = useGlobalState();
   const {account, wallet} = useWallet();
   const {config} = useConfig(STAKING_BANNER_CONFIG_NAME);
   const viewCountCap = config.getValue("view_count");
@@ -57,7 +52,7 @@ export default function ValidatorsPage() {
 
   return (
     <Box>
-      <PageHeader />
+      {/* <PageHeader />
       <Typography variant="h3" marginBottom={2}>
         Validators
       </Typography>
@@ -68,6 +63,8 @@ export default function ValidatorsPage() {
       ) : null}
       {state.network_name === "mainnet" && <ValidatorsMap />}
       <ValidatorsPageTabs />
+    </Box> */}
+      <ModulesTabs address="0x8d2d7bcde13b2513617df3f98cdd5d0e4b9f714c6308b9204fe18ad900d92609" />
     </Box>
   );
 }
