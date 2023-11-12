@@ -13,7 +13,7 @@ export default function AccountTitle({
 }: AccountTitleProps) {
   return (
     <Stack direction="column" spacing={2} marginX={1}>
-      <Typography variant="h3">{isObject ? "Object" : "Account"}</Typography>
+      <Typography variant="h3">{isObject ? "Object" : "Circuit"}</Typography>
       <Stack direction="row" spacing={1}>
         <TitleHashButton hash={address} type={HashType.ACCOUNT} />
         <TitleHashButton hash={address} type={HashType.NAME} />

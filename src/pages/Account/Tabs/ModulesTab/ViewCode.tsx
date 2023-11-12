@@ -209,7 +209,7 @@ function ModuleHeader({
       flexWrap={"wrap"}
     >
       <Typography fontSize={24} fontWeight={700}>
-        {moduleName}
+        {`zkP2P`}
       </Typography>
       <Box>
         {module && (

@@ -14,6 +14,8 @@ const TabComponents = Object.freeze({
   code: ViewCode,
   run: RunContract,
   view: ReadContract,
+  analyse: ReadContract,
+  powerOfTau: ReadContract,
 });
 
 type TabValue = keyof typeof TabComponents;
@@ -23,9 +25,13 @@ function getTabLabel(value: TabValue): string {
     case "code":
       return "Code";
     case "run":
-      return "Run";
+      return "Prove";
     case "view":
-      return "View";
+      return "Verify";
+    case "analyse":
+      return "Analyse";
+    case "powerOfTau":
+      return "Power of Tau";
     default:
       return assertNever(value);
   }

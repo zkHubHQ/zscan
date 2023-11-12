@@ -164,7 +164,7 @@ function Contract({address, isRead}: {address: string; isRead: boolean}) {
           borderRadius={1}
         >
           {!module || !fn ? (
-            <Typography>Please select a function</Typography>
+            <Typography>Will be supported soon!</Typography>
           ) : isRead ? (
             <ReadContractForm module={module} fn={fn} key={contractFormKey} />
           ) : (
